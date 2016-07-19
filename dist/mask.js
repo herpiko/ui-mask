@@ -1,7 +1,7 @@
 /*!
  * angular-ui-mask
  * https://github.com/angular-ui/ui-mask
- * Version: 1.8.6 - 2016-06-20T21:05:48.730Z
+ * Version: 1.8.6 - 2016-07-19T09:55:27.775Z
  * License: MIT
  */
 
@@ -288,6 +288,9 @@ angular.module('ui.mask', [])
 
                             function validateValue(value) {
                                 // Zero-length value validity is ngRequired's determination
+                                if (iAttrs.uiMaskAllowLess) {
+                                  return true;
+                                }
                                 return value.length ? value.length >= minRequiredLength : true;
                             }
 

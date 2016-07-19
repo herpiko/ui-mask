@@ -278,6 +278,9 @@ angular.module('ui.mask', [])
 
                             function validateValue(value) {
                                 // Zero-length value validity is ngRequired's determination
+                                if (iAttrs.uiMaskAllowLess) {
+                                  return true;
+                                }
                                 return value.length ? value.length >= minRequiredLength : true;
                             }
 
