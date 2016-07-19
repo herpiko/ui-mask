@@ -87,7 +87,7 @@ app.config(['uiMask.ConfigProvider', function(uiMaskConfigProvider) {
   uiMaskConfigProvider.maskDefinitions({'A': /[a-z], '*': /[a-zA-Z0-9]/});
   uiMaskConfigProvider.clearOnBlur(false);
   uiMaskConfigProvider.eventsToHandle(['input', 'keyup', 'click']);
-}
+}])
 ```
 
 #### maskDefinitions
@@ -101,6 +101,9 @@ Allows customizing the mask placeholder when a user has focused the input elemen
 
 #### uiMaskPlaceholderChar
 Allows customizing the mask placeholder character. The default mask placeholder is `_`.
+
+#### uiMaskAllowLess
+Allows value length that less than minimum required length to be considered as valid.
 
 Set this attribute to the word `space` if you want the placeholder character to be whitespace.
 
